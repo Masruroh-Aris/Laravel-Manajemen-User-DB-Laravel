@@ -1,0 +1,33 @@
+Instalisasi Package Depedency Laravel
+		Composer create-project Laravel/Laravel Laravel
+	bagian bold bisa di ganti nama package kita.
+
+Membuat controller (php artisan make:controller nama_controller)
+
+Membuat View (php artisan make:view nama_view)
+
+Membuat model untuk file yang akan di migrasikan (php artisan make:model nama_model -m)
+
+Mengaktifkan XAMPP
+
+Pada .env bagian DB di kofigurasi 
+	DB_CONNECTION=mysql
+	DB_HOST=127.0.0.1
+	DB_PORT=3306
+	DB_DATABASE=laravel
+	DB_USERNAME=root
+	DB_PASSWORD=
+
+Memigrasikan database (php artisan migrate)
+
+create migration to edit user table (php artisan make:migration add_is_admin_to_users_table --table=users)
+
+Memigrasikan database (php artisan migrate)
+
+make controller in folder (php artisan make:controller /admin/auth/nama_cont)
+
+nake middleware to connect http to app (php artisan make:middleware IsAdminMiddleware)
+
+Pada Laravel konfigurasi middleware dilakukan di file bootstrap/app.php karena nantinya file ini akan menjadi pusat pengaturan utama aplikasi. Semua konfigurasi penting seperti routing dan middleware serta penanganan error diatur disatu tempat agar struktur proyek lebih sederhana dan proses instalisasi aplikasi lebih efisien. Selanjutnya saya akan mendaftarkan middleware baru yaitu is_admin.
+
+CONTROLLER>ROUTE>VIEW
